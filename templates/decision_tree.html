@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Decision Tree</title>
+  </head>
+  <body>
+  <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">CREDIT CARD FRAUD</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">FILL THE FORM</p>
+      <br><br><h2><b>{{prediction_text}}</b></h2>
+    </div>
+    <div>
+    
+    </div>
+<form action='/decision_tree' method='POST'>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter average of amount per transaction per day</label>
+    <input type="text" class="form-control" id="avg_amount_days" name="avg_amount_days">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter the amount of the transaction</label>
+    <input type="text" class="form-control" id="transaction_amount" name="transaction_amount" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter daily average of chargeback</label>
+    <input type="text" class="form-control" id="daily_chbk_avg_amt" name="daily_chbk_avg_amt" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter 6-months average of chargeback</label>
+    <input type="text" class="form-control" id="avg_chbk_amt" name="avg_chbk_amt" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter frequency of the 6-months chargeback</label>
+    <input type="text" class="form-control" id="chbk_freq" name="chbk_freq" >
+  </div>
+      <button type="submit" class="btn btn-primary" style="background-color: black;">CHECK</button>
+      </form>
+    </div>
+</section>
+  </body>
+</html>
